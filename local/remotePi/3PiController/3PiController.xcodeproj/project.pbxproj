@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AADB73F31A9BB9B10019A859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB73F21A9BB9B10019A859 /* main.m */; };
+		AADB73F61A9BB9B10019A859 /* AppDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB73F51A9BB9B10019A859 /* AppDelegates.m */; };
+		AADB73F91A9BB9B10019A859 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB73F81A9BB9B10019A859 /* ViewController.m */; };
+		AADB73FE1A9BB9B10019A859 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADB73FD1A9BB9B10019A859 /* Images.xcassets */; };
+		AADB74011A9BB9B10019A859 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADB73FF1A9BB9B10019A859 /* LaunchScreen.xib */; };
+		AADB740D1A9BB9B20019A859 /* _PiControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB740C1A9BB9B20019A859 /* _PiControllerTests.m */; };
+		AADB741B1A9BC3040019A859 /* mainConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADB741A1A9BC3040019A859 /* mainConsole.xib */; };
+		AADB741D1A9BC53A0019A859 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADB741C1A9BC53A0019A859 /* SettingView.xib */; };
+		AADB74241A9BC8B70019A859 /* MainConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB74231A9BC8B70019A859 /* MainConsoleController.m */; };
+		AADB74261A9BCA6C0019A859 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADB74251A9BCA6C0019A859 /* SettingViewController.m */; };
+		AADB742C1A9BD2720019A859 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADB742B1A9BD2720019A859 /* RootView.xib */; };
+		AADB74341A9BEA2C0019A859 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AADB74331A9BEA2C0019A859 /* MainWindow.xib */; };
+		AADB743A1A9BF5090019A859 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADB74391A9BF5090019A859 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AADB74071A9BB9B20019A859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AADB73E51A9BB9B10019A859 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADB73EC1A9BB9B10019A859;
+			remoteInfo = 3PiController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AADB73ED1A9BB9B10019A859 /* 3PiController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3PiController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADB73F11A9BB9B10019A859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADB73F21A9BB9B10019A859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AADB73F41A9BB9B10019A859 /* AppDelegates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegates.h; sourceTree = "<group>"; };
+		AADB73F51A9BB9B10019A859 /* AppDelegates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegates.m; sourceTree = "<group>"; };
+		AADB73F71A9BB9B10019A859 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AADB73F81A9BB9B10019A859 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AADB73FD1A9BB9B10019A859 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AADB74001A9BB9B10019A859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AADB74061A9BB9B20019A859 /* 3PiControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3PiControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADB740B1A9BB9B20019A859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADB740C1A9BB9B20019A859 /* _PiControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _PiControllerTests.m; sourceTree = "<group>"; };
+		AADB741A1A9BC3040019A859 /* mainConsole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = mainConsole.xib; path = ../mainConsole.xib; sourceTree = "<group>"; };
+		AADB741C1A9BC53A0019A859 /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		AADB74221A9BC8930019A859 /* MainConsoleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainConsoleController.h; path = ../MainConsoleController.h; sourceTree = "<group>"; };
+		AADB74231A9BC8B70019A859 /* MainConsoleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConsoleController.m; sourceTree = "<group>"; };
+		AADB74251A9BCA6C0019A859 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		AADB74271A9BCA7D0019A859 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		AADB742B1A9BD2720019A859 /* RootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootView.xib; sourceTree = "<group>"; };
+		AADB74331A9BEA2C0019A859 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../MainWindow.xib; sourceTree = "<group>"; };
+		AADB74391A9BF5090019A859 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AADB73EA1A9BB9B10019A859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB74031A9BB9B20019A859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AADB73E41A9BB9B10019A859 = {
+			isa = PBXGroup;
+			children = (
+				AADB74391A9BF5090019A859 /* Default-568h@2x.png */,
+				AADB73EF1A9BB9B10019A859 /* 3PiController */,
+				AADB74091A9BB9B20019A859 /* 3PiControllerTests */,
+				AADB73EE1A9BB9B10019A859 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AADB73EE1A9BB9B10019A859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AADB73ED1A9BB9B10019A859 /* 3PiController.app */,
+				AADB74061A9BB9B20019A859 /* 3PiControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AADB73EF1A9BB9B10019A859 /* 3PiController */ = {
+			isa = PBXGroup;
+			children = (
+				AADB74171A9BC2280019A859 /* Resources */,
+				AADB74161A9BC2090019A859 /* Classes */,
+				AADB73FD1A9BB9B10019A859 /* Images.xcassets */,
+				AADB73F01A9BB9B10019A859 /* Supporting Files */,
+			);
+			path = 3PiController;
+			sourceTree = "<group>";
+		};
+		AADB73F01A9BB9B10019A859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADB73F11A9BB9B10019A859 /* Info.plist */,
+				AADB73F21A9BB9B10019A859 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AADB74091A9BB9B20019A859 /* 3PiControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AADB740C1A9BB9B20019A859 /* _PiControllerTests.m */,
+				AADB740A1A9BB9B20019A859 /* Supporting Files */,
+			);
+			path = 3PiControllerTests;
+			sourceTree = "<group>";
+		};
+		AADB740A1A9BB9B20019A859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADB740B1A9BB9B20019A859 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AADB74161A9BC2090019A859 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AADB74221A9BC8930019A859 /* MainConsoleController.h */,
+				AADB74231A9BC8B70019A859 /* MainConsoleController.m */,
+				AADB73F41A9BB9B10019A859 /* AppDelegates.h */,
+				AADB73F51A9BB9B10019A859 /* AppDelegates.m */,
+				AADB73F71A9BB9B10019A859 /* ViewController.h */,
+				AADB73F81A9BB9B10019A859 /* ViewController.m */,
+				AADB74271A9BCA7D0019A859 /* SettingViewController.h */,
+				AADB74251A9BCA6C0019A859 /* SettingViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		AADB74171A9BC2280019A859 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AADB74331A9BEA2C0019A859 /* MainWindow.xib */,
+				AADB741A1A9BC3040019A859 /* mainConsole.xib */,
+				AADB741C1A9BC53A0019A859 /* SettingView.xib */,
+				AADB742B1A9BD2720019A859 /* RootView.xib */,
+				AADB73FF1A9BB9B10019A859 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AADB73EC1A9BB9B10019A859 /* 3PiController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADB74101A9BB9B20019A859 /* Build configuration list for PBXNativeTarget "3PiController" */;
+			buildPhases = (
+				AADB73E91A9BB9B10019A859 /* Sources */,
+				AADB73EA1A9BB9B10019A859 /* Frameworks */,
+				AADB73EB1A9BB9B10019A859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3PiController;
+			productName = 3PiController;
+			productReference = AADB73ED1A9BB9B10019A859 /* 3PiController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AADB74051A9BB9B20019A859 /* 3PiControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADB74131A9BB9B20019A859 /* Build configuration list for PBXNativeTarget "3PiControllerTests" */;
+			buildPhases = (
+				AADB74021A9BB9B20019A859 /* Sources */,
+				AADB74031A9BB9B20019A859 /* Frameworks */,
+				AADB74041A9BB9B20019A859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADB74081A9BB9B20019A859 /* PBXTargetDependency */,
+			);
+			name = 3PiControllerTests;
+			productName = 3PiControllerTests;
+			productReference = AADB74061A9BB9B20019A859 /* 3PiControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AADB73E51A9BB9B10019A859 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = 3piControllerIOS;
+				TargetAttributes = {
+					AADB73EC1A9BB9B10019A859 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = AWCRMQBEL6;
+					};
+					AADB74051A9BB9B20019A859 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AADB73EC1A9BB9B10019A859;
+					};
+				};
+			};
+			buildConfigurationList = AADB73E81A9BB9B10019A859 /* Build configuration list for PBXProject "3PiController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AADB73E41A9BB9B10019A859;
+			productRefGroup = AADB73EE1A9BB9B10019A859 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AADB73EC1A9BB9B10019A859 /* 3PiController */,
+				AADB74051A9BB9B20019A859 /* 3PiControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AADB73EB1A9BB9B10019A859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADB742C1A9BD2720019A859 /* RootView.xib in Resources */,
+				AADB741B1A9BC3040019A859 /* mainConsole.xib in Resources */,
+				AADB74011A9BB9B10019A859 /* LaunchScreen.xib in Resources */,
+				AADB741D1A9BC53A0019A859 /* SettingView.xib in Resources */,
+				AADB74341A9BEA2C0019A859 /* MainWindow.xib in Resources */,
+				AADB743A1A9BF5090019A859 /* Default-568h@2x.png in Resources */,
+				AADB73FE1A9BB9B10019A859 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB74041A9BB9B20019A859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AADB73E91A9BB9B10019A859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADB73F91A9BB9B10019A859 /* ViewController.m in Sources */,
+				AADB73F61A9BB9B10019A859 /* AppDelegates.m in Sources */,
+				AADB74241A9BC8B70019A859 /* MainConsoleController.m in Sources */,
+				AADB73F31A9BB9B10019A859 /* main.m in Sources */,
+				AADB74261A9BCA6C0019A859 /* SettingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADB74021A9BB9B20019A859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADB740D1A9BB9B20019A859 /* _PiControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AADB74081A9BB9B20019A859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADB73EC1A9BB9B10019A859 /* 3PiController */;
+			targetProxy = AADB74071A9BB9B20019A859 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AADB73FF1A9BB9B10019A859 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AADB74001A9BB9B10019A859 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AADB740E1A9BB9B20019A859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AADB740F1A9BB9B20019A859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AADB74111A9BB9B20019A859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = 3PiController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AADB74121A9BB9B20019A859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = 3PiController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AADB74141A9BB9B20019A859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = 3PiControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3PiController.app/3PiController";
+			};
+			name = Debug;
+		};
+		AADB74151A9BB9B20019A859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = 3PiControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3PiController.app/3PiController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AADB73E81A9BB9B10019A859 /* Build configuration list for PBXProject "3PiController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB740E1A9BB9B20019A859 /* Debug */,
+				AADB740F1A9BB9B20019A859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB74101A9BB9B20019A859 /* Build configuration list for PBXNativeTarget "3PiController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB74111A9BB9B20019A859 /* Debug */,
+				AADB74121A9BB9B20019A859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADB74131A9BB9B20019A859 /* Build configuration list for PBXNativeTarget "3PiControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADB74141A9BB9B20019A859 /* Debug */,
+				AADB74151A9BB9B20019A859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AADB73E51A9BB9B10019A859 /* Project object */;
+}

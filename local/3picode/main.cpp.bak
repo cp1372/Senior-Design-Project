@@ -1,0 +1,20 @@
+#include "PiCommand.h"
+#include "PiCommandFactory.h"
+#include "SerialManager.h"
+#include <pololu/orangutan>
+
+int main()
+{
+    OrangutanLEDs::green(HIGH);
+    OrangutanLEDs::red(TOGGLE);
+    OrangutanLCD::print("Derp");
+    
+    SerialManager serial;
+    PiCommandFactory factory(&serial);
+
+    while(1)
+    {
+       PiCommand *command = factory.createCommand();
+       command->execute();
+    }
+}

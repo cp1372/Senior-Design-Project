@@ -1,0 +1,1 @@
+add_library(pi2core rpicamera.cpp ColorBallAlgorithm.cpp BarcodeAlgorithm.cpp TestAlg.cpp opencvcam.cpp logic.cpp tcpacceptor.cpp tcpstream.cpp SocketServerManager.cpp CommandQueue.cpp FrameQueue.cpp HTTPServer.cpp JSONService.cpp RemoteAlg.cpp HTTPServerManager.cpp SharedVariables.cpp)

@@ -1,0 +1,2 @@
+/home/pi/local/build/pi2core/CMakeFiles/pi2core.dir
+/home/pi/local/build/CMakeFiles/testExec.dir

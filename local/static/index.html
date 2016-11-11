@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="stream.js"></script> 
+
+
+</head>
+<body onload='startTimer()'>
+<div id="mainbody">
+<img src="3pilogo.png" height="225px" width="300px">
+<h1>Pi-Squared Stream</h1>
+<div id="content">
+<img id='stream1' width ="320" height="240" src='/api/frame/1' onerror="this.style.display='none'" onload="this.style.display='inline'">
+<img id='stream2' width ="320" height="240" src='/api/frame/2' onerror="this.style.display='none'" onload="this.style.display='inline'">
+
+</div>
+<h2>Controls</h2>
+<div id="HMax"></div>
+<div id="controls">
+<!-- Remote Control -->
+<div id="rc" style="display:none">
+<button onmousedown='sendCommand("init")'>init</button>        
+<button onmousedown='sendCommand("forward")'>forward</button>        
+<button onmousedown='sendCommand("backward")'>backward</button>        
+<button onmousedown='sendCommand("stop")'>stop</button>
+</div>
+<!-- HSV Control -->
+<div id="hsv" style="display:none">
+<label for="HMax">Hue Max:</label>
+<input type="range" name="HMax" id="HMax" value="255" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">
+<br>
+<label for="HMin">Hue Min:</label>
+<input type="range" name="HMin" id="HMin" value="0" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">
+<br>
+<label for="SMax">Sat Max:</label>
+<input type="range" name="SMax" id="SMax" value="255" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">
+<br>
+<label for="SMin">Sat Min:</label>
+<input type="range" name="SMin" id="SMin" value="0" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">
+<br>
+<label for="VMax">Val Max:</label>
+<input type="range" name="VMax" id="VMax" value="255" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">
+<br>
+<label for="VMin">Val Min:</label>
+<input type="range" name="VMin" id="VMin" value="0" min="0" max="255" onchange="sendColorCommand(this.value, this.name)">      
+</div>
+
+</div>
+</div>
+</body>
+</html>

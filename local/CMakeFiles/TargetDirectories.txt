@@ -1,0 +1,2 @@
+/home/pi/Local/pi-squared/pi2core/CMakeFiles/pi2core.dir
+/home/pi/Local/pi-squared/CMakeFiles/testExec.dir

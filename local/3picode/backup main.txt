@@ -1,0 +1,268 @@
+#include "../pi2core/pi2serialenums.h"
+#include "C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\avr\include\pololu\Pololu3pi\Pololu3pi.h"
+   
+char receive_buffer[32];
+char send_buffer[32];
+unsigned char receive_buffer_position = 0;
+
+void process_messages();
+void initialize();
+void move();
+void increment_buffer_position();
+char get_next_byte();
+unsigned int max(unsigned int* arr, unsigned int len);
+
+int speed = 40;
+int direction = 1;
+int oobRevTime = 1000;
+unsigned long turnDuration = 0;
+unsigned long currentTime = 0;
+unsigned int sensors[5]; // an array to hold sensor values
+
+// 0 = currently stopped, 1 = currently moving
+int moving = 1;
+bool first = true;
+
+
+int main()
+{
+	OrangutanSerial::setBaudRate(9600);
+	OrangutanSerial::receiveRing(receive_buffer, sizeof(receive_buffer));
+	
+    while(1)
+    {
+        process_messages();
+    }
+}
+
+// Initializes the 3pi, displays a welcome message, calibrates, and
+// plays the initial music.
+void initialize()
+{
+	unsigned int counter; // used as a simple timer
+	
+	// This must be called at the beginning of 3pi code, to set up the
+	// sensors.  We use a value of 2000 for the timeout, which
+	// corresponds to 2000*0.4 us = 0.8 ms on our 20 MHz processor.
+	pololu_3pi_init(2000);
+	
+	// Auto-calibration: turn right and left while calibrating the
+	// sensors.
+	for(counter=0;counter<80;counter++)
+	{
+		if(counter < 20 || counter >= 60)
+		set_motors(40,-40);
+		else
+		set_motors(-40,40);
+		
+		// This function records a set of sensor readings and keeps
+		// track of the minimum and maximum values encountered.  The
+		// IR_EMITTERS_ON argument means that the IR LEDs will be
+		// turned on during the reading, which is usually what you
+		// want.
+		calibrate_line_sensors(IR_EMITTERS_ON);
+		
+		// Since our counter runs to 80, the total delay will be
+		// 80*20 = 1600 ms.
+		delay_ms(20);
+	}
+	set_motors(0,0);
+}
+
+void move() {
+	// Get the position of the line.  Note that we *must* provide
+	// the "sensors" argument to read_line() here, even though we
+	// are not interested in the individual sensor readings.
+	unsigned int position = read_line(sensors,IR_EMITTERS_ON);
+	int velocity = direction * speed;
+	unsigned int maxSensor = max(sensors, 5);
+	
+	if (maxSensor < 200) {
+		direction = direction * -1;
+		velocity = direction * speed;
+		set_motors(velocity,velocity);
+		delay_ms(oobRevTime);
+	}
+	
+	// 0 < p < 1000
+	else if (position < 1000)
+	{
+		// We are far to the right of the line: turn left.
+		
+		// Set the right motor to 100 and the left motor to zero,
+		// to do a sharp turn to the left.  Note that the maximum
+		// value of either motor speed is 255, so we are driving
+		// it at just about 40% of the max.
+		
+		if (direction == -1) {
+			//direction = 1;
+			//velocity = direction * speed;
+			//wasBackwards = 1;
+			//set_motors(0, 0);
+			maxSensor = max(sensors, 5);
+			set_motors(-velocity, velocity);
+			time_reset();
+			
+			while (maxSensor > 50) {
+				position = read_line(sensors, IR_EMITTERS_ON);
+				maxSensor = max(sensors, 5);
+			}
+			
+			turnDuration = get_ms();
+			set_motors(velocity, velocity);
+			time_reset();
+			
+			while (position < 1 && get_ms() < 500) {
+				position = read_line(sensors, IR_EMITTERS_ON);
+			}
+			
+			currentTime = get_ms();
+			set_motors(velocity, -velocity);
+			time_reset();
+			
+			if (currentTime > 500) {
+				while (get_ms() < turnDuration);
+			}
+			else {
+				while (position < 1500) {
+					position = read_line(sensors, IR_EMITTERS_ON);
+				}
+			}
+			
+			set_motors(velocity, velocity);
+		}
+		else {
+			set_motors(-velocity, velocity);
+		}
+	}
+	
+	// 1000 < p < 3000
+	else if (position < 3000)
+	{
+		// We are somewhat close to being centered on the line:
+		// drive straight.
+		//if (wasBackwards) {
+		//	direction = -1;
+		
+		//	wasBackwards = 0;
+		//}
+		
+		set_motors(velocity, velocity);
+	}
+	
+	// 3000 < p < 4000
+	else
+	{
+		// We are far to the left of the line: turn right.
+		if (direction == -1) {
+			//direction = 1;
+			//velocity = direction * speed;
+			//wasBackwards = 1;
+			//set_motors(0, 0);
+			
+			maxSensor = max(sensors, 5);
+			set_motors(velocity, -velocity);
+			time_reset();
+			
+			while (maxSensor > 50) {
+				position = read_line(sensors, IR_EMITTERS_ON);
+				maxSensor = max(sensors, 5);
+			}
+			
+			turnDuration = get_ms();
+			set_motors(velocity, velocity);
+			time_reset();
+			
+			while (position > 3999 && get_ms() < 500) {
+				position = read_line(sensors, IR_EMITTERS_ON);
+			}
+			
+			currentTime = get_ms();
+			set_motors(-velocity, velocity);
+			time_reset();
+			
+			if (currentTime > 500) {
+				while (get_ms() < turnDuration);
+			}
+			else {
+				while (position > 2500) {
+					position = read_line(sensors, IR_EMITTERS_ON);
+				}
+			}
+			
+			set_motors(velocity, velocity);
+		}
+		else {
+			set_motors(velocity, -velocity);
+		}
+	}
+}
+
+unsigned int max(unsigned int* arr, unsigned int len) {
+	unsigned int ret = 0;
+	
+	for (unsigned int i = 0; i < len; i++) {
+		if (arr[i] > ret) {
+			ret = arr[i];
+		}
+	}
+	
+	return ret;
+}
+
+void process_messages() {
+	//get one byte
+	char message = get_next_byte();
+
+/*	switch (message) {
+		case pi2::INIT: {
+			initialize();
+		} break;
+		
+		case pi2::GO: {
+			moving = 1;
+		} break;
+		
+		case pi2::CHANGEDIR: {
+			direction = direction * -1;
+		} break;
+		
+		case pi2::STOP: {
+			set_motors(0, 0);
+			moving = 0;
+		} break;
+		
+		default: {
+			// invalid instruction, ignore
+		} break;
+	}*/
+
+	if (first) {
+		initialize();
+		first = false;
+	}
+	
+	if (moving) {
+		move();
+	}
+}
+
+char get_next_byte(){
+	char byte;
+	while (OrangutanSerial::getReceivedBytes() == receive_buffer_position);
+	byte = receive_buffer[receive_buffer_position];
+	increment_buffer_position();
+	return byte;
+}
+
+void increment_buffer_position()
+{
+	if (receive_buffer_position == sizeof(receive_buffer)-1)
+        {
+            receive_buffer_position = 0;
+        }
+        else
+        {
+            receive_buffer_position++;
+        }
+}
